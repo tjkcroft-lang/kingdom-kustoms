@@ -1,5 +1,7 @@
 import {garmentPhoto} from "./garmentPhoto.js";
-// Garment photographs must be supplied with commercial usage permission.\nconst photoAssets={};\nimport React,{useEffect,useRef,useState} from "react";
+// Garment photographs must be supplied with commercial usage permission.
+const photoAssets={};
+import React,{useEffect,useRef,useState} from "react";
 import {shapes,shapeById,categories} from "./shapes.js";
 import {getPrintArea} from "./printProfiles.js";
 import {styles,colours,sizes,methods} from "./catalog.js";
