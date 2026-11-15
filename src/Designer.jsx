@@ -1,6 +1,6 @@
 import {garmentPhoto} from "./garmentPhoto.js";
 // Garment photographs must be supplied with commercial usage permission.
-const photoAssets={};
+const photoAssets={"Staple Tee":{"Black":{"Front":"https://cdn11.bigcommerce.com/s-hsi95a83fz/images/stencil/1500w/products/182/10681/5001_STAPLE_TEE_BLACK__80682.1774216143.jpg?c=1","Back":"https://cdn11.bigcommerce.com/s-hsi95a83fz/images/stencil/1500w/products/182/10790/5001_STAPLE_TEE_BLACK_BACK__49737.1774216143.jpg?c=1"}}};
 import React,{useEffect,useRef,useState} from "react";
 import {shapes,shapeById,categories} from "./shapes.js";
 import {getPrintArea} from "./printProfiles.js";
