@@ -16,7 +16,7 @@ const commit=next=>{setHistory(h=>[...h.slice(-49),state]);setFuture([]);setStat
 const patch=changes=>commit({...state,...changes});
 const current=state.layers[state.side]||[];const active=current.find(x=>x.id===selected);const area=getPrintArea(state.style,state.side)||[300,400];const garmentColour=colours.find(c=>c.name===state.colour)?.hex||"#202020";
 const setLayers=layers=>commit({...state,layers:{...state.layers,[state.side]:layers}});
-const add=obj=>{const l={id:uid(),x:250,y:270,w:150,h:120,rotation:0,fill:"#c8fa48",opacity:1,...obj};setLayers([...current,l]);setSelected(l.id)};
+const add=obj=>{const l={id:uid(),x:250,y:270,w:150,h:120,rotation:0,fill:"#c8fa48",opacity:1,...obj,id:uid()};setLayers([...current,l]);setSelected(l.id)};
 const edit=change=>{if(!active)return;setLayers(current.map(l=>l.id===selected?{...l,...change}:l))};
 const undo=()=>{if(!history.length)return;setFuture(f=>[state,...f]);setState(history[history.length-1]);setHistory(h=>h.slice(0,-1))};
 const redo=()=>{if(!future.length)return;setHistory(h=>[...h,state]);setState(future[0]);setFuture(f=>f.slice(1))};
